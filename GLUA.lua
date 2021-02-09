@@ -1,4 +1,5 @@
--- Gaslua V1
+function load()
+  -- Gaslua V1
   _G.GLUAVERSION = "Gaslua Alpha v1"
 
   --Switch Statements
@@ -7,9 +8,9 @@
       table[var]()
     elseif table["callback"] then
       table["callback"]()
-    else
-      error("Callback not found")
-    end
+      else
+          error("Callback not found")
+      end
   end
 
   -- Convert table to string
@@ -112,12 +113,15 @@
     return nil
   end
 
--- Add table to printing
-local old_print = print
-_G.print = function(text)
-  if type(text) == "table" then
-    print_table(text)
-  else
-    old_print(tostring(text))
+  -- Add table to printing
+  local old_print = print
+  _G.print = function(text)
+    if type(text) == "table" then
+      print_table(text)
+    else
+      old_print(tostring(text))
+    end
   end
 end
+
+return load 
