@@ -1,4 +1,4 @@
-function load()
+function _G.load()
   -- Gaslua V1
   _G.GLUAVERSION = "Gaslua Alpha v1"
 
