@@ -115,7 +115,6 @@
   -- Add table to printing
   local old_print = print
   _G.print = function(text)
-    print("AI")
     if type(text) == "table" then
       print("Printing Table!!!")
       print_table(text)
