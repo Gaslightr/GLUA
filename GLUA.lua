@@ -112,12 +112,12 @@
     return nil
   end
 
-  -- Add table to printing
-  local old_print = print
-  _G.print = function(text)
-    if type(text) == "table" then
-      print_table(text)
-    else
-      old_print(tostring(text))
-    end
+-- Add table to printing
+local old_print = print
+_G.print = function(text)
+  if type(text) == "table" then
+    print_table(text)
+  else
+    old_print(tostring(text))
   end
+end
