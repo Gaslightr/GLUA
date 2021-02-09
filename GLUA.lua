@@ -54,6 +54,8 @@ function _G.print_table(table)
   end
 end
 
+local print_table = _G.print_table
+
 -- Create a class
 function _G.class(name, class, inherit)
   if type(name) == "string" and type(class) == "table" then
