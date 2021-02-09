@@ -115,7 +115,7 @@ function _G.load()
 
   -- Add table to printing
   local old_print = print
-  _G.print = function(text)
+  print = function(text)
     if type(text) == "table" then
       print_table(text)
     else
