@@ -116,7 +116,6 @@
   local old_print = print
   _G.print = function(text)
     if type(text) == "table" then
-      print("Printing Table!!!")
       print_table(text)
     else
       old_print(tostring(text))
