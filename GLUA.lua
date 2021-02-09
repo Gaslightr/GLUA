@@ -29,7 +29,7 @@ function _G.load()
         if type(t) == "string" then
           o = o..indent..tostring(i).." = \""..t.."\",\n"
         elseif type(t) == "table" then
-          o = o..ident..lu._G.table_tostring(t, indent + 1)..",\n"
+          o = o..ident.._G.table_tostring(t, indent + 1)..",\n"
         else
           o = o ..ident..tostring(i).." = "..tostring(t)..",\n"
         end
