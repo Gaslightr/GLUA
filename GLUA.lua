@@ -26,6 +26,7 @@ end
    if type(table) == "table" then
      local o = "{\n"
       for i, t in next, table do
+        wait()
         if type(t) == "string" then
          o = o..indent..tostring(i).." = \""..t.."\",\n"
         elseif type(t) == "table" then
@@ -43,6 +44,7 @@ function glua.print_table(table)
   if type(table) == "table" then
     local o = "Table = {\n"
     for i, t in next, table do
+      wait()
       if type(t) == "string" then
         o = o .."  "..tostring(i).." = \""..t.."\",\n"
       elseif type(t) == "table" then
