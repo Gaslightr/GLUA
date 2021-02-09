@@ -116,8 +116,8 @@ end
 local old_print = print
 print = function(text)
   if type(text) == "table" then
-    print_table(text)
     print("Printing Table!!!")
+    print_table(text)
   else
     old_print(tostring(text))
   end
